@@ -37,17 +37,24 @@ import numpy as np
 #     print(result)
 # print(named_agg(df))
 
-df = pd.read_csv("imdb-top-1000.csv")
-print(df.head(1))
-def get_sum_of_genre(df):
-    first_methd = df.groupby("Genre").sum()["Gross"].sort_values(ascending=False).head(3)
-    second_method =  df.groupby("Genre")["Gross"].sum().sort_values(ascending=False).head(3)
-    return df.groupby("Genre")["IMDB_Rating"].mean().sort_values(ascending=False).head(3)
+# df = pd.read_csv("imdb-top-1000.csv")
+# print(df.head(1))
+# def get_sum_of_genre(df):
+#     first_methd = df.groupby("Genre").sum()["Gross"].sort_values(ascending=False).head(3)
+#     second_method =  df.groupby("Genre")["Gross"].sum().sort_values(ascending=False).head(3)
+#     return df.groupby("Genre")["IMDB_Rating"].mean().sort_values(ascending=False).head(3)
 
 
-# print(get_sum_of_genre(df))
+# # print(get_sum_of_genre(df))
 
-def get_top_director_by_votes(df):
-    top = df.groupby("Director")["No_of_Votes"].max().sort_values(ascending=False).head(1)
-    return top
-print(get_top_director_by_votes(df))
+# def get_top_director_by_votes(df):
+#     top = df.groupby("Director")["No_of_Votes"].sum().sort_values(ascending=False).head(1)
+#     return top
+# # print(get_top_director_by_votes(df))
+
+# def total_runtime_by_actor(df):
+#     total_runtime = df.groupby("Star1")["Series_Title"].count().sort_values(ascending=False)
+#     return total_runtime
+# print(total_runtime_by_actor(df))
+
+
